@@ -5,8 +5,8 @@ module OmniAuth
   module Strategies
     class Afterclassroom < OmniAuth::Strategies::OAuth
       option :name, 'afterclassroom'
-      option :client_options, {:authorize_path => '/oauth/authenticate',
-                               :site => 'https://afterclassroom.com'}
+      option :client_options, {:authorize_path => '/oauth/afterclassroom',
+                               :site => 'http://localhost:3000'}#https://afterclassroom.com
 
       uid { access_token.params[:user_id] }
 
